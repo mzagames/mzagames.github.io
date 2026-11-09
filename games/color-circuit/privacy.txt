@@ -1,0 +1,44 @@
+COLOR CIRCUIT PRIVACY POLICY
+Last updated: 9 November 2026
+Developer: MZA Gaming
+App: Color Circuit
+Android package: com.mzagaming.colorcircuit
+Contact: mzagamingsupport@gmail.com
+Public policy: https://mzagames.github.io/games/color-circuit/privacy.html
+
+1. Scope
+This policy describes Color Circuit version 1.4.0. The game is intended for players aged 9 and older, including children and adults. This testing release uses Google demo advertisements only for eligible adult sessions. Live advertising and in-app purchases are disabled. Demo ads do not generate revenue.
+
+2. Age choices and children
+On first launch, the game asks for an age range without preselecting an answer. Players may choose Prefer not to say. This coarse choice, including a skipped answer, is remembered in a separate file on this device so the question is not repeated on later launches. It is not sent to MZA Gaming. A missing or damaged choice file causes the question to appear again, with advertising off until it is answered. Clearing app storage or reinstalling may also reset the choice. The game does not request a date of birth or identity document. Self-reported age is not identity or parental-consent verification.
+
+As a conservative setting, only players who select 21 and over may initialize the advertising adapter and Google's consent service. All other age ranges, unanswered questions and skipped answers receive no banner or rewarded ads, no advertising-service initialization by the game, and no purchase prompts. Children are not asked to consent to advertising. No child-ad certification is claimed: this version does not serve ads to children or users of unknown age.
+
+The same 3,000 puzzles, hints, five-life capacity, life regeneration and free practice are available regardless of the answer. External browser links in the privacy panel are available only in eligible adult sessions; everyone can read this full policy inside the game without opening a browser.
+
+3. Information saved on your device
+Color Circuit saves puzzle progress, unfinished puzzles, stars, lives, refill times, gameplay time, undo history, completed lessons, recent daily-circuit progress and preferences locally. It does not require a game account. MZA Gaming does not operate a cloud-save service or developer analytics server for this release. The game has no player chat, user-posted content or location-based gameplay.
+
+4. Google advertising services for eligible adults
+After an eligible adult answer, the game requests updated consent information through Google's User Messaging Platform before initializing the ads SDK. If the update fails or the consent status does not permit requesting ads, advertisements remain unavailable. Applicable Google privacy forms and choices depend on region, account configuration and service availability. Players can access Ad privacy choices in Settings when advertising is enabled. They can also stop new ads for the rest of the play session using Turn off ads for this session. This does not erase information Google has already processed or guarantee that an initialized SDK immediately stops every background activity.
+
+This release requests Google demo banner and rewarded ads only. Test ads and consent services can still make network requests and process information. Depending on the service, SDK and settings, Google may process IP-based approximate location, app/ad interactions, diagnostics and device or account identifiers for advertising, analytics and fraud prevention. Network traffic uses TLS according to Google's SDK disclosure. Removing advertising-ID permissions does not mean that every other identifier or type of data is absent.
+
+The app removes Android advertising-ID, Google advertising-ID, basic phone-state and Android advertising-services permissions from its merged manifest. It does not request camera, microphone, contacts, SMS or precise-location access. Network access and optional vibration are included. Google's processing and retention are governed by its own policies.
+
+Google Privacy Policy: https://policies.google.com/privacy
+Google advertising SDK disclosure: https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure
+
+5. Choices and local data removal
+Core puzzles and life regeneration work offline. One life returns every 15 minutes up to five. Easy and free practice need no lives. Easy has no timer or move limit. Normal and Hard retain timed challenges and five lives. Rewarded ads, when available to eligible adults, are optional. Skipping a rewarded ad does not itself turn off a banner. No ad or purchase is required to access a puzzle.
+
+Use Reset local progress in Settings to reset gameplay progress. Clearing Android app storage or uninstalling the game removes local saved information. These actions do not erase information separately retained by Google. Android and Google provide their own privacy controls, subject to device and account availability.
+
+6. Purchases and support
+In-app purchases are disabled in this release. The game does not collect payment-card information or open a payment flow. The early-access feedback panel lets you type an optional message and copy a report with the game version, screen or puzzle context, and platform name to your device clipboard. It does not transmit the report automatically. The typed message is not saved in the game save file. You choose whether to send it using your own email app. Avoid including personal information. If you email support, your email provider and the support mailbox process your email address and message so your enquiry can be handled. Do not include unnecessary personal information, especially information about a child. A parent or guardian may contact mzagamingsupport@gmail.com about privacy or local-data removal. Requests about data held by Google may need to be directed to Google.
+
+7. Retention and security
+Local game information remains until it is reset, cleared or removed with the app. The remembered age range remains on this device until app storage is cleared or the app is removed. It does not automatically change as a player grows older. Reset local progress resets gameplay only and keeps this privacy choice. Google applies its own retention rules to information processed by its services. Support messages may be retained while needed to resolve and document the enquiry, subject to applicable obligations. Contact the support email for requests concerning information provided directly to MZA Gaming. No method of storage or transmission can be guaranteed completely secure.
+
+8. Policy updates
+We will revise this policy when features, advertising, purchases or data practices change. The date above identifies this version. This policy describes implemented features; it is not a certification of legal compliance or a statement that Google has approved the app.
