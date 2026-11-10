@@ -7,7 +7,7 @@ Contact: mzagames@proton.me
 Public policy: https://mzagames.github.io/games/color-circuit/privacy.html
 
 1. Scope
-This policy describes Color Circuit version 1.5.1. The game is intended for players aged 9 and older, including children and adults. This testing release uses Google demo advertisements only for eligible adult sessions. Live advertising and in-app purchases are disabled. Demo ads do not generate revenue.
+This policy describes Color Circuit version 1.5.2. The game is intended for players aged 9 and older, including children and adults. This testing release uses Google demo advertisements only for eligible adult sessions. Live advertising and in-app purchases are disabled. Demo ads do not generate revenue.
 
 2. Age choices and children
 On first launch, the game asks for an age range without preselecting an answer. Players may choose Prefer not to say. This coarse choice, including a skipped answer, is remembered in a separate file on this device so the question is not repeated on later launches. It is not sent to MZA Gaming. A missing or damaged choice file causes the question to appear again, with advertising off until it is answered. Clearing app storage or reinstalling may also reset the choice. The game does not request a date of birth or identity document. Self-reported age is not identity or parental-consent verification.
@@ -36,6 +36,8 @@ Use Reset local progress in Settings to reset gameplay progress. Clearing Androi
 
 6. Purchases and support
 In-app purchases are disabled in this release. The game does not collect payment-card information or open a payment flow. The early-access feedback panel lets you type an optional message and copy a report with the game version, screen or puzzle context, and platform name to your device clipboard. It does not transmit the report automatically. The typed message is not saved in the game save file. You choose whether to send it using your own email app. Avoid including personal information. If you email support, your email provider and the support mailbox process your email address and message so your enquiry can be handled. Do not include unnecessary personal information, especially information about a child. A parent or guardian may contact mzagames@proton.me about privacy or local-data removal. Requests about data held by Google may need to be directed to Google.
+
+When the game opens, it asks the Google Play Store app on your device whether a newer version of Color Circuit is available for you. This check is handled by Google Play under Google's policies; the game does not send it to MZA Gaming. If an update is available, you can choose Update now or Cancel.
 
 7. Retention and security
 Local game information remains until it is reset, cleared or removed with the app. The remembered age range remains on this device until app storage is cleared or the app is removed. It does not automatically change as a player grows older. Reset local progress resets gameplay only and keeps this privacy choice. Google applies its own retention rules to information processed by its services. Support messages may be retained while needed to resolve and document the enquiry, subject to applicable obligations. Contact the support email for requests concerning information provided directly to MZA Gaming. No method of storage or transmission can be guaranteed completely secure.
