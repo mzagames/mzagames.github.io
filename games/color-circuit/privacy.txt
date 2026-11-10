@@ -7,7 +7,7 @@ Contact: mzagames@proton.me
 Public policy: https://mzagames.github.io/games/color-circuit/privacy.html
 
 1. Scope
-This policy describes Color Circuit version 1.5.0. The game is intended for players aged 9 and older, including children and adults. This testing release uses Google demo advertisements only for eligible adult sessions. Live advertising and in-app purchases are disabled. Demo ads do not generate revenue.
+This policy describes Color Circuit version 1.5.1. The game is intended for players aged 9 and older, including children and adults. This testing release uses Google demo advertisements only for eligible adult sessions. Live advertising and in-app purchases are disabled. Demo ads do not generate revenue.
 
 2. Age choices and children
 On first launch, the game asks for an age range without preselecting an answer. Players may choose Prefer not to say. This coarse choice, including a skipped answer, is remembered in a separate file on this device so the question is not repeated on later launches. It is not sent to MZA Gaming. A missing or damaged choice file causes the question to appear again, with advertising off until it is answered. Clearing app storage or reinstalling may also reset the choice. The game does not request a date of birth or identity document. Self-reported age is not identity or parental-consent verification.
