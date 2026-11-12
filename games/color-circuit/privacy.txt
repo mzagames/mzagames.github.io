@@ -1,5 +1,5 @@
 COLOR CIRCUIT PRIVACY POLICY
-Last updated: 10 November 2026
+Last updated: 12 November 2026
 Developer: MZA Gaming
 App: Color Circuit
 Android package: com.mzagaming.colorcircuit
@@ -7,7 +7,7 @@ Contact: mzagames@proton.me
 Public policy: https://mzagames.github.io/games/color-circuit/privacy.html
 
 1. Scope
-This policy describes Color Circuit version 1.5.2. The game is intended for players aged 9 and older, including children and adults. This testing release uses Google demo advertisements only for eligible adult sessions. Live advertising and in-app purchases are disabled. Demo ads do not generate revenue.
+This policy describes Color Circuit version 1.6.0. The game is intended for players aged 9 and older, including children and adults. Eligible adult sessions may show Google AdMob banner ads and optional rewarded ads, and can buy the one-time Remove ads purchase.
 
 2. Age choices and children
 On first launch, the game asks for an age range without preselecting an answer. Players may choose Prefer not to say. This coarse choice, including a skipped answer, is remembered in a separate file on this device so the question is not repeated on later launches. It is not sent to MZA Gaming. A missing or damaged choice file causes the question to appear again, with advertising off until it is answered. Clearing app storage or reinstalling may also reset the choice. The game does not request a date of birth or identity document. Self-reported age is not identity or parental-consent verification.
@@ -22,7 +22,7 @@ Color Circuit saves puzzle progress, unfinished puzzles, stars, lives, refill ti
 4. Google advertising services for eligible adults
 After an eligible adult answer, the game requests updated consent information through Google's User Messaging Platform before initializing the ads SDK. If the update fails or the consent status does not permit requesting ads, advertisements remain unavailable. Applicable Google privacy forms and choices depend on region, account configuration and service availability. Players can access Ad privacy choices in Settings when advertising is enabled. They can also stop new ads for the rest of the play session using Turn off ads for this session. This does not erase information Google has already processed or guarantee that an initialized SDK immediately stops every background activity.
 
-This release requests Google demo banner and rewarded ads only. Test ads and consent services can still make network requests and process information. Depending on the service, SDK and settings, Google may process IP-based approximate location, app/ad interactions, diagnostics and device or account identifiers for advertising, analytics and fraud prevention. Network traffic uses TLS according to Google's SDK disclosure. Removing advertising-ID permissions does not mean that every other identifier or type of data is absent.
+This release requests banner and optional rewarded ads from Google AdMob. Ads and consent services make network requests and process information. Depending on the service, SDK and settings, Google may process IP-based approximate location, app/ad interactions, diagnostics and device or account identifiers for advertising, analytics and fraud prevention. Network traffic uses TLS according to Google's SDK disclosure. Removing advertising-ID permissions does not mean that every other identifier or type of data is absent.
 
 The app removes Android advertising-ID, Google advertising-ID, basic phone-state and Android advertising-services permissions from its merged manifest. It does not request camera, microphone, contacts, SMS or precise-location access. Network access and optional vibration are included. Google's processing and retention are governed by its own policies.
 
@@ -35,9 +35,15 @@ Core puzzles and life regeneration work offline. One life returns every 15 minut
 Use Reset local progress in Settings to reset gameplay progress. Clearing Android app storage or uninstalling the game removes local saved information. These actions do not erase information separately retained by Google. Android and Google provide their own privacy controls, subject to device and account availability.
 
 6. Purchases and support
-In-app purchases are disabled in this release. The game does not collect payment-card information or open a payment flow. The early-access feedback panel lets you type an optional message and copy a report with the game version, screen or puzzle context, and platform name to your device clipboard. It does not transmit the report automatically. The typed message is not saved in the game save file. You choose whether to send it using your own email app. Avoid including personal information. If you email support, your email provider and the support mailbox process your email address and message so your enquiry can be handled. Do not include unnecessary personal information, especially information about a child. A parent or guardian may contact mzagames@proton.me about privacy or local-data removal. Requests about data held by Google may need to be directed to Google.
+If you email support, your email provider and the support mailbox process your email address and message so your enquiry can be handled. Do not include unnecessary personal information, especially information about a child. A parent or guardian may contact mzagames@proton.me about privacy or local-data removal. Requests about data held by Google may need to be directed to Google.
 
 When the game opens, it asks the Google Play Store app on your device whether a newer version of Color Circuit is available for you. This check is handled by Google Play under Google's policies; the game does not send it to MZA Gaming. If an update is available, you can choose Update now or Cancel.
+
+Remove ads purchase
+The game offers one optional, one-time purchase called "Remove ads" through Google Play. Google Play handles the payment, so MZA Gaming never receives your card or payment details. The game only receives Google Play's record that the Google account on the device owns the purchase, keeps a yes/no note of it on the device, and asks Google Play again when it starts so the purchase comes back after a reinstall and is withdrawn if it is refunded. Once bought, Color Circuit shows no ads. Refilling all five lives no longer needs an ad. Like ads, the purchase is offered only in sessions where the player chose 21 and over. Google Play's terms and the Google Privacy Policy apply to the payment.
+
+In-game feedback form
+Settings has a Send feedback form. When you press Send, it sends only the category you pick, your message, where you were in the game (menu or puzzle), the game version, your Android version and phone model and, if you type one, an e-mail address for our reply. It travels over an encrypted connection to a small relay run by MZA Gaming on Google Apps Script, which e-mails it to mzagames@proton.me. Google hosts the relay and the e-mail under its own policies. Nothing is sent until you press Send, and an unsent draft stays only on your device. We use feedback only to reply to you and to improve Color Circuit, keep it only as long as needed for that, and never sell it. Players who chose an age under 13 or preferred not to say see no e-mail box, and for them the phone model is not sent. Please don't include personal details you don't want to share. To have a message deleted, e-mail mzagames@proton.me.
 
 7. Retention and security
 Local game information remains until it is reset, cleared or removed with the app. The remembered age range remains on this device until app storage is cleared or the app is removed. It does not automatically change as a player grows older. Reset local progress resets gameplay only and keeps this privacy choice. Google applies its own retention rules to information processed by its services. Support messages may be retained while needed to resolve and document the enquiry, subject to applicable obligations. Contact the support email for requests concerning information provided directly to MZA Gaming. No method of storage or transmission can be guaranteed completely secure.
