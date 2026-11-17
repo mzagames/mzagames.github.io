@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MZA Gaming · Game Store</title>
-<meta name="description" content="The MZA Gaming store: calm, clever puzzle games for Android and the web. MindGrid, Color Circuit, Arrowku, Wood Fit: IQ Master and Pengdoku.">
+<meta name="description" content="The MZA Games store: calm, clever puzzle games for Android on Google Play. MindGrid, Color Circuit, Arrowku, Wood Fit: IQ Master and Pengdoku.">
 <meta property="og:title" content="MZA Gaming · Game Store">
-<meta property="og:description" content="Calm, clever puzzle games for Android and the web.">
+<meta property="og:description" content="Calm, clever puzzle games for Android on Google Play.">
 <meta property="og:image" content="https://mzagames.github.io/games/mindgrid/feature.png">
 <meta name="theme-color" content="#0a0a0c">
 <link rel="icon" href="mza-icon-192.png" type="image/png">
@@ -103,7 +103,7 @@ img{display:block;max-width:100%}
 .harrow:hover{background:var(--brand);border-color:var(--brand)}
 .harrow svg{width:22px;height:22px}
 .harrow.prev{left:12px}.harrow.next{right:12px}
-.htabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.htabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:12px}
 .htab{position:relative;overflow:hidden;display:flex;align-items:center;gap:10px;text-align:left;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 12px;cursor:pointer;transition:border-color .15s,transform .15s}
 .htab:hover{transform:translateY(-1px)}
 .htab img{width:38px;height:38px;border-radius:10px;flex:none}
@@ -121,7 +121,11 @@ img{display:block;max-width:100%}
 .filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
 /* game grid */
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.gp-badge{display:inline-block;line-height:0;align-self:flex-start}
+.gp-badge img{height:60px;width:auto;margin:-9px -7px}
+.factions{align-items:center}
+.factions .gp-badge img{height:64px}
 .game{background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .15s,box-shadow .15s;scroll-margin-top:84px}
 .game:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
 .game[hidden]{display:none}
@@ -162,6 +166,7 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
 
 .games-empty{display:none;padding:30px;text-align:center;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:22px}
 
+@media (max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:900px){
   .sgrid{grid-template-columns:minmax(0,1fr);padding:28px 22px 24px;gap:8px;min-height:0}
   .visual{height:250px;order:-1}
@@ -178,13 +183,14 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
   .track{border-radius:24px}
   .harrow{display:none}
   .htabs{gap:6px}
-  .htab{flex-direction:column;gap:4px;padding:8px 4px;text-align:center}
+  .htab{flex-direction:column;gap:4px;padding:8px 2px;text-align:center}
+  .htab img{width:34px;height:34px}
   .htab b{font-size:12px}
   .htab small{display:none}
   .brand img{height:38px}
   .brand small{display:none}
 }
-@media (max-width:420px){.art .p2{right:-4px}.art .p1{left:0}}
+@media (max-width:420px){.art .p2{right:-4px}.art .p1{left:0}.htab b{font-size:11px;line-height:1.15}.factions .btn{flex:1 1 100%;justify-content:center}.fhead img{width:60px;height:60px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -203,7 +209,7 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
 
 <main class="wrap">
   <!-- HERO SLIDESHOW: every game gets a slide -->
-  <h1 class="sr">MZA Games: puzzle games for Android and the web</h1>
+  <h1 class="sr">MZA Games: puzzle games for Android on Google Play</h1>
   <section class="hero" id="hero" aria-roledescription="carousel" aria-label="Featured games">
     <button class="harrow prev" type="button" aria-label="Previous game"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="harrow next" type="button" aria-label="Next game"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -220,9 +226,10 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
             <ul class="fchips"><li>6 puzzle types</li><li>4 difficulties</li><li>Works offline</li></ul>
             <div class="factions">
               <a class="btn play" href="https://play.google.com/apps/testing/com.mzagaming.mindgrid"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l16-9.2c.4-.2.4-.8 0-1L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg><span class="two"><small>Early access</small>Google Play</span></a>
-              <a class="btn ghost" href="https://mzagames.github.io/mindgrid/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>Play in browser</a>
+              <a class="btn ghost" href="games/mindgrid/">See the game</a>
+              <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.mzagaming.mindgrid"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
             </div>
-            <p class="fnote">Closed testing on Android. <a href="#beta">How to join</a> · <a href="https://mzagames.github.io/mindgrid/privacy.html">Privacy</a> · <a href="https://github.com/mzagames/mindgrid">Source</a></p>
+            <p class="fnote">Closed testing on Android. <a href="#beta">How to join</a> · <a href="https://mzagames.github.io/mindgrid/privacy.html">Privacy</a></p>
           </div>
           <div class="visual phones" aria-hidden="true">
             <img src="games/mindgrid/02-crowns.jpg" alt="">
@@ -244,8 +251,9 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
             <div class="factions">
               <a class="btn play" href="https://play.google.com/apps/testing/com.mzagaming.colorcircuit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l16-9.2c.4-.2.4-.8 0-1L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg><span class="two"><small>Early access</small>Google Play</span></a>
               <a class="btn ghost" href="games/color-circuit/">See the update</a>
+              <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.mzagaming.colorcircuit"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
             </div>
-            <p class="fnote">Version 1.5 · Early access · Closed testing on Android. <a href="#beta">How to join</a> · <a href="games/color-circuit/privacy.html">Privacy</a></p>
+            <p class="fnote">Version 1.6 · Early access · Closed testing on Android. <a href="#beta">How to join</a> · <a href="games/color-circuit/privacy.html">Privacy</a></p>
           </div>
           <div class="visual art" aria-hidden="true" style="--halo:conic-gradient(#ff5f7e,#5096ff,#4fe3b5,#ffc45a,#ff5f7e)">
             <span class="halo"></span><img class="bigicon" src="games/colorcircuit-icon.png" alt="">
@@ -264,10 +272,11 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
             <div class="feyebrow"><span class="badge"><i></i>Early access on Google Play</span></div>
             <div class="fhead"><img src="games/arrowku-icon.png" alt="Arrowku icon"><div><h2>Arrowku</h2><p>Arrow Puzzles · Puzzle</p></div></div>
             <p class="fpitch">Untangle calm arrow puzzles and collect 520 cute kawaii pictures, one level at a time.</p>
-            <ul class="fchips"><li>12,000 levels</li><li>240 worlds</li><li>Zen mode</li></ul>
+            <ul class="fchips"><li>12,000 levels</li><li>240 worlds</li><li>520 pictures</li></ul>
             <div class="factions">
               <a class="btn play" href="https://play.google.com/apps/testing/com.directional_arrows"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l16-9.2c.4-.2.4-.8 0-1L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg><span class="two"><small>Early access</small>Google Play</span></a>
-              <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.directional_arrows">Google Play page</a>
+              <a class="btn ghost" href="games/arrowku/">See the game</a>
+              <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.directional_arrows"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
             </div>
             <p class="fnote">Closed testing on Android. <a href="#beta">How to join</a> · <a href="games/arrowku/privacy.html">Privacy</a></p>
           </div>
@@ -291,7 +300,8 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
             <ul class="fchips"><li>Block puzzles</li><li>Daily Carving</li><li>Offline</li></ul>
             <div class="factions">
               <a class="btn play" href="https://play.google.com/apps/testing/com.mzagaming.woodfitiqmaster"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l16-9.2c.4-.2.4-.8 0-1L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg><span class="two"><small>Early access</small>Google Play</span></a>
-              <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.mzagaming.woodfitiqmaster">Google Play page</a>
+              <a class="btn ghost" href="woodfit/">See the game</a>
+              <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.mzagaming.woodfitiqmaster"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
             </div>
             <p class="fnote">Closed testing on Android. <a href="#beta">How to join</a> · <a href="woodfit/privacy.html">Privacy</a></p>
           </div>
@@ -315,6 +325,7 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
             <div class="factions">
               <a class="btn play" href="https://play.google.com/apps/testing/com.mzagames.pengdoku"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l16-9.2c.4-.2.4-.8 0-1L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg><span class="two"><small>Early access</small>Google Play</span></a>
               <a class="btn ghost" href="games/pengdoku/">See the game</a>
+              <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.mzagames.pengdoku"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
             </div>
             <p class="fnote">Closed testing on Android. <a href="#beta">How to join</a> · <a href="games/pengdoku/privacy.html">Privacy</a> · <a href="games/pengdoku/terms.html">Terms</a></p>
           </div>
@@ -328,39 +339,40 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
     </div>
 
     <div class="htabs" role="tablist" aria-label="Choose a game">
-      <button class="htab" type="button" role="tab" aria-selected="true" aria-controls="slide-mindgrid"><img src="games/mindgrid-icon.png" alt=""><span><b>MindGrid</b><small>Early access · Android + Web</small></span><i></i></button>
+      <button class="htab" type="button" role="tab" aria-selected="true" aria-controls="slide-mindgrid"><img src="games/mindgrid-icon.png" alt=""><span><b>MindGrid</b><small>Early access · Android</small></span><i></i></button>
       <button class="htab" type="button" role="tab" aria-selected="false" aria-controls="slide-colorcircuit"><img src="games/colorcircuit-icon.png" alt=""><span><b>Color Circuit</b><small>Early access · Android</small></span><i></i></button>
       <button class="htab" type="button" role="tab" aria-selected="false" aria-controls="slide-arrowku"><img src="games/arrowku-icon.png" alt=""><span><b>Arrowku</b><small>Early access · Android</small></span><i></i></button>
       <button class="htab" type="button" role="tab" aria-selected="false" aria-controls="slide-woodfit"><img src="games/woodfit-icon.png" alt=""><span><b>Wood Fit</b><small>Early access · Android</small></span><i></i></button>
-      <button class="htab" type="button" role="tab" aria-selected="false" aria-controls="slide-pengdoku"><img src="games/pengdoku-icon.png" alt=""><span><b>Pengdoku</b><small>New · Early access · Android</small></span><i></i></button>
+      <button class="htab" type="button" role="tab" aria-selected="false" aria-controls="slide-pengdoku"><img src="games/pengdoku-icon.png" alt=""><span><b>Pengdoku</b><small>Early access · Android</small></span><i></i></button>
     </div>
   </section>
 
   <!-- ALL GAMES -->
   <div class="sechead" id="games">
-    <div><h2>All games</h2><p>Free puzzle games for Android and the web.</p></div>
+    <div><h2>All games</h2><p>Free puzzle games for Android, on Google Play.</p></div>
     <div class="filters" role="group" aria-label="Filter games">
       <button type="button" data-f="all" aria-pressed="true">All</button>
       <button type="button" data-f="beta" aria-pressed="false">Early access</button>
-      <button type="button" data-f="web" aria-pressed="false">Play in browser</button>
+      <button type="button" data-f="new" aria-pressed="false">New</button>
     </div>
   </div>
 
   <div class="grid" id="grid">
-    <article class="game" id="mindgrid" data-tags="beta web">
+    <article class="game" id="mindgrid" data-tags="beta new">
       <div class="cover" style="--cv:linear-gradient(135deg,#1e1b4b,#4338ca 55%,#df9628)">
         <img src="games/mindgrid-icon.png" alt="MindGrid icon"><span class="badge beta"><i></i>Early access</span>
       </div>
       <div class="gbody">
         <h3>MindGrid: Daily Logic Puzzles</h3>
-        <div class="meta"><span>Puzzle</span><span>Android · Web</span><span>Free · Ads</span></div>
+        <div class="meta"><span>Puzzle</span><span>Android</span><span>Free · Ads</span></div>
         <p>Six fresh logic puzzles every day, an endless Journey and a free year-long Archive.</p>
         <ul class="tags"><li>Daily</li><li>Logic</li><li>Offline</li></ul>
         <div class="actions">
           <a class="btn play" href="https://play.google.com/apps/testing/com.mzagaming.mindgrid"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l16-9.2c.4-.2.4-.8 0-1L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg>Join early access</a>
-          <a class="btn web" href="https://mzagames.github.io/mindgrid/">Play now</a>
+          <a class="btn ghost" href="games/mindgrid/">See the game</a>
         </div>
-        <p class="small"><a href="https://mzagames.github.io/mindgrid/privacy.html">Privacy</a> · <a href="https://github.com/mzagames/mindgrid">GitHub</a></p>
+        <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.mzagaming.mindgrid"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
+        <p class="small"><a href="https://mzagames.github.io/mindgrid/privacy.html">Privacy</a></p>
       </div>
     </article>
 
@@ -370,14 +382,15 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
       </div>
       <div class="gbody">
         <h3>Color Circuit</h3>
-        <div class="meta"><span>Puzzle</span><span>Android</span><span>Free · Demo ads</span></div>
+        <div class="meta"><span>Puzzle</span><span>Android</span><span>Free · Ads</span></div>
         <p>Rotate circuits, mix colors and connect every source to its output across 3,000 levels. Learn through five interactive lessons, undo a turn and explore daily circuits.</p>
         <ul class="tags"><li>3,000 levels</li><li>Color mixing</li><li>5 lessons</li><li>Daily circuits</li></ul>
         <div class="actions">
           <a class="btn play" href="https://play.google.com/apps/testing/com.mzagaming.colorcircuit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l16-9.2c.4-.2.4-.8 0-1L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg>Join early access</a>
           <a class="btn ghost" href="games/color-circuit/">See the update</a>
-      </div>
-        <p class="small"><a href="games/color-circuit/privacy.html">Privacy policy</a> · Version 1.5 · Early access</p>
+        </div>
+        <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.mzagaming.colorcircuit"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
+        <p class="small"><a href="games/color-circuit/privacy.html">Privacy policy</a> · Version 1.6 · Early access</p>
       </div>
     </article>
 
@@ -389,11 +402,12 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
         <h3>Arrowku</h3>
         <div class="meta"><span>Puzzle</span><span>Android</span><span>Free · Ads</span></div>
         <p>Untangle calm arrow puzzles and collect 520 cute kawaii pictures, one level at a time.</p>
-        <ul class="tags"><li>12,000 levels</li><li>240 worlds</li><li>Zen mode</li></ul>
+        <ul class="tags"><li>12,000 levels</li><li>240 worlds</li><li>520 pictures</li></ul>
         <div class="actions">
           <a class="btn play" href="https://play.google.com/apps/testing/com.directional_arrows"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l16-9.2c.4-.2.4-.8 0-1L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg>Join early access</a>
-          <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.directional_arrows">Google Play page</a>
+          <a class="btn ghost" href="games/arrowku/">See the game</a>
         </div>
+        <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.directional_arrows"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
         <p class="small"><a href="games/arrowku/privacy.html">Privacy</a></p>
       </div>
     </article>
@@ -404,18 +418,19 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
       </div>
       <div class="gbody">
         <h3>Wood Fit: IQ Master</h3>
-        <div class="meta"><span>Puzzle</span><span>Android</span><span>Free</span></div>
+        <div class="meta"><span>Puzzle</span><span>Android</span><span>Free · Ads</span></div>
         <p>A cozy wooden block puzzle with a Daily Carving, streaks and a for-fun Puzzle IQ.</p>
         <ul class="tags"><li>Block puzzles</li><li>Daily Carving</li><li>Offline</li></ul>
         <div class="actions">
           <a class="btn play" href="https://play.google.com/apps/testing/com.mzagaming.woodfitiqmaster"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l16-9.2c.4-.2.4-.8 0-1L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg>Join early access</a>
-          <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.mzagaming.woodfitiqmaster">Google Play page</a>
+          <a class="btn ghost" href="woodfit/">See the game</a>
         </div>
+        <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.mzagaming.woodfitiqmaster"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
         <p class="small"><a href="woodfit/privacy.html">Privacy</a></p>
       </div>
     </article>
 
-    <article class="game" id="pengdoku" data-tags="beta">
+    <article class="game" id="pengdoku" data-tags="beta new">
       <div class="cover" style="--cv:linear-gradient(135deg,#0c1f36,#2f7fbf 55%,#ee88b6)">
         <img src="games/pengdoku-icon.png" alt="Pengdoku icon"><span class="badge beta"><i></i>Early access</span>
       </div>
@@ -428,7 +443,8 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
           <a class="btn play" href="https://play.google.com/apps/testing/com.mzagames.pengdoku"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8.9.6l16-9.2c.4-.2.4-.8 0-1L4.9 2.2c-.4-.2-.9.1-.9.6z"/></svg>Join early access</a>
           <a class="btn ghost" href="games/pengdoku/">See the game</a>
         </div>
-        <p class="small"><a href="games/pengdoku/privacy.html">Privacy</a> · <a href="games/pengdoku/terms.html">Terms</a> · <a href="https://play.google.com/store/apps/details?id=com.mzagames.pengdoku">Google Play page</a></p>
+        <a class="gp-badge" href="https://play.google.com/store/apps/details?id=com.mzagames.pengdoku"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
+        <p class="small"><a href="games/pengdoku/privacy.html">Privacy</a> · <a href="games/pengdoku/terms.html">Terms</a></p>
       </div>
     </article>
   </div>
@@ -459,10 +475,11 @@ footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margi
 <footer>
   <a href="./" class="flogo" aria-label="MZA Games store home"><img src="mza-games-logo.png" alt="MZA Games" width="94" height="48"></a>
   <nav aria-label="Footer">
-    <a href="#games">Games</a><a href="#beta">Early access</a><a href="https://github.com/mzagames">GitHub</a>
+    <a href="#games">Games</a><a href="#beta">Early access</a><a href="games/mindgrid/">MindGrid</a><a href="games/color-circuit/">Color Circuit</a><a href="games/arrowku/">Arrowku</a><a href="woodfit/">Wood Fit</a><a href="games/pengdoku/">Pengdoku</a></nav>
+  <nav aria-label="Privacy">
     <a href="https://mzagames.github.io/mindgrid/privacy.html">MindGrid privacy</a><a href="woodfit/privacy.html">Wood Fit privacy</a><a href="games/color-circuit/privacy.html">Color Circuit privacy</a><a href="games/arrowku/privacy.html">Arrowku privacy</a><a href="games/pengdoku/privacy.html">Pengdoku privacy</a><a href="privacy.html">All privacy policies</a>
   </nav>
-  © 2026 MZA Gaming · Google Play and the Google Play logo are trademarks of Google LLC.
+  © 2026 MZA Games · Google Play and the Google Play logo are trademarks of Google LLC.
 </footer>
 
 <script>
