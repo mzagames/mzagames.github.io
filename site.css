@@ -1,0 +1,26 @@
+/* Shared polish for every MZA Games page. Each page loads this after its own styles. */
+
+/* Comfortable reading width on wide screens. */
+main p, main li { max-width: 72ch; }
+.card p, .card li, .cards p, .chips li, figcaption { max-width: none; }
+
+/* Screenshot galleries: phone shots stay phone-sized on desktop (5 per row on a laptop),
+   two per row on phones. */
+.shots { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important; }
+@media (max-width: 540px) { .shots { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 12px !important; } }
+
+/* Thumb-friendly header links (44 px tap targets). */
+header .nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; }
+header .nav a:first-child { padding-left: 0; }
+
+/* Studio bar for pages that keep their own game-themed header (privacy policies). */
+.site-bar { background: #08090d; border-bottom: 2px solid #e3161e; }
+.site-bar nav { max-width: 1120px; margin: 0 auto; padding: 6px 20px; display: flex; align-items: center; gap: 18px; }
+.site-bar a { color: #eef3fb; text-decoration: none; font: 700 15px/1 system-ui, sans-serif; display: inline-flex; align-items: center; min-height: 44px; }
+.site-bar a.home { margin-right: auto; }
+.site-bar img { width: 84px; height: auto; display: block; }
+.site-bar a:focus-visible { outline: 3px solid #ffcb66; outline-offset: 4px; }
+@media (max-width: 380px) { .site-bar nav { gap: 12px; padding: 6px 14px; } .site-bar img { width: 72px; } }
+
+/* Home page footer link lists: comfortable tap targets on phones. */
+footer nav a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 4px; }
